@@ -9,7 +9,10 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('notes', function() {
     this.route('new');
+    this.route('edit', { path: ':note_id/edit' });
+    this.route('delete', { path: ':note_id/delete' });
   });
+  this.route('dashboard', { path: '/'});
 });
 
 export default Router;

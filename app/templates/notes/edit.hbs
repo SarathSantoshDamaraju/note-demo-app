@@ -1,5 +1,4 @@
 {{input value=model.title}}
 {{textarea value=model.description}}
-<button {{action "sam" model}} disabled={{v-get model 'isInvalid'}}>submit</button>
+<button {{action "updateRecord" model}} disabled={{v-get model 'isInvalid'}}>submit</button>
 {{#link-to 'notes' tagName="button"}}cancel{{/link-to}}
-{{outlet}}

@@ -1,13 +1,12 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-    model(){
-        return this.store.createRecord('note');
+    model(params){
+        return this.store.findRecord('note', params.note_id)
     },
     actions:{
-        sam(note){
+        updateRecord(note){
             let _this = this;
-            // debugger
             note.save()
                 .then(function(){
                     _this.transitionTo('notes');

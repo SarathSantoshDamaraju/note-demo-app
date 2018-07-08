@@ -24,6 +24,9 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -44,6 +47,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    }
     // here you can enable a production-specific feature
   }
 
