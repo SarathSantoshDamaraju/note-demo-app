@@ -11,6 +11,7 @@ export default Route.extend({
             note.save()
                 .then(function(){
                     _this.transitionTo('notes');
+                    console.log("samrrrrr")
                 }).catch(function(){
 
                 });

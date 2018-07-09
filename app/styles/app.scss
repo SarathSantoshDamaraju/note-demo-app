@@ -1,0 +1,15 @@
+// Variables and mixins
+@import 'pages/variables'; 
+@import 'pages/commons'; 
+@import 'pages/grid-mixins';
+
+// reset codes
+@import 'pages/normilize'; 
+
+// Pages
+
+@import 'pages/dashboard';
+@import 'pages/typo';
+@import 'pages/gridmethods';
+@import 'pages/grid';
+@import 'pages/avatar';

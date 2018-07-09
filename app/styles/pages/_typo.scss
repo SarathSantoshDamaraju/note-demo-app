@@ -1,0 +1,151 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.#{$name-prefix}h1,
+.#{$name-prefix}h2,
+.#{$name-prefix}h3,
+.#{$name-prefix}h4,
+.#{$name-prefix}h5,
+.#{$name-prefix}h6 {
+  font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+  line-height: $font-line0height;
+  color: $primary-color;
+}
+
+h1,
+.#{$name-prefix}h1 {
+  font-size: $font-size-h1;
+  font-weight: bold;
+}
+
+h2,
+.#{$name-prefix}h2 {
+  font-size: $font-size-h2;
+  font-weight: 500;
+}
+
+h3,
+.#{$name-prefix}h3 {
+  font-size: $font-size-h3;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+h4,
+.#{$name-prefix}h4 {
+  font-size: $font-size-h4;
+  font-weight: 600;
+}
+
+h5,
+.#{$name-prefix}h5 {
+  font-size: $font-size-h5;
+  font-weight: 400;
+}
+
+h6,
+.#{$name-prefix}h6 {
+  font-size: $font-size-h6;
+  font-weight: 400;
+}
+
+.#{$name-prefix}lighter {
+  font-weight: 300;
+}
+
+.#{$name-prefix}text-medium {
+  font-weight: 500;
+}
+
+.#{$name-prefix}text-bold {
+  font-weight: 700;
+}
+
+// Alignment
+.#{$name-prefix}text-left {
+  text-align: left;
+}
+
+.#{$name-prefix}text-right {
+  text-align: right;
+}
+
+.#{$name-prefix}text-center {
+  text-align: center;
+}
+
+.#{$name-prefix}text-justify {
+  text-align: justify;
+}
+
+.#{$name-prefix}text-nowrap {
+  white-space: nowrap;
+}
+
+// Transformation
+.#{$name-prefix}text-lowercase {
+  text-transform: lowercase;
+}
+
+.#{$name-prefix}text-uppercase {
+  text-transform: uppercase;
+}
+
+.#{$name-prefix}text-capitalize {
+  text-transform: capitalize;
+}
+
+.#{$name-prefix}primary-link {
+  color: #448ee1;
+}
+
+.#{$name-prefix}danger-link {
+  color: $brand-failure;
+}
+
+.#{$name-prefix}link-text {
+  &:hover,
+  &:focus,
+  &:active {
+    color: #448ee1;
+    transition: ease 0.2s;
+  }
+}
+
+// text color variation
+.#{$name-prefix}sm-txt {
+  font-family: $primary-font;
+  font-size: $font-size-small;
+  font-weight: 400;
+}
+
+.#{$name-prefix}md-txt {
+  font-family: $primary-font;
+  font-size: $font-size-large;
+  font-weight: 400;
+}
+
+.#{$name-prefix}secondary-txt {
+  color: $secondary-text;
+}
+
+.#{$name-prefix}info-txt {
+  color: $info-text;
+}
+
+.#{$name-prefix}disable-txt {
+  opacity: 0.5;
+}
+.#{$name-prefix}text-length-max{
+  max-width: 200px;
+}
+.#{$name-prefix}text-ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

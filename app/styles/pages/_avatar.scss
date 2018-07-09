@@ -1,0 +1,23 @@
+.#{$name-prefix}avatar {
+    padding: 3px;
+    min-height: 30px;
+    min-width: 30px;
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    color: $brand-white;
+    font-weight: 100;
+    background: #2F2724;
+    border-radius: 3px;
+}
+  
+  @each $name,
+  $colors in $avatar-colors {
+    $primary: nth($colors, 1);
+    $secondary: nth($colors, 2);
+    .#{$name-prefix}avatar[dataval=#{$name}] {
+      background: linear-gradient(144.35deg, $primary 0%, $secondary 100%);
+    }
+  }
+  
+  

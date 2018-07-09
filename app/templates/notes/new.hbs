@@ -1,5 +1,12 @@
-{{input value=model.title}}
-{{textarea value=model.description}}
-<button {{action "sam" model}} disabled={{v-get model 'isInvalid'}}>submit</button>
-{{#link-to 'notes' tagName="button"}}cancel{{/link-to}}
-{{outlet}}
+<div class="new-light-box-mask">
+    <div class="new-light-box">
+        <h2>New Note</h2>
+        <label class="label-txt">Enter the title *</label>
+        {{input value=model.title class="fm-heading-text"}}
+        <label class="label-txt">Enter the title *</label>
+        {{textarea value=model.description class="fm-heading-textarea"}}
+        <button {{action "sam" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-new">submit</button>
+        {{#link-to 'notes' tagName="button" class="action-btn btn-new"}}cancel{{/link-to}}
+        {{outlet}}
+    </div>
+</div>

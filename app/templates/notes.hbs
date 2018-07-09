@@ -1,12 +1,18 @@
-<ul>
+<div class="fm-content-area">
+<ul class="fm-note-wrap">
     {{#each model as |note|}}
-        <li>
-            <b>{{note.title}}</b>
-            <p>{{note.description}}</p>
-            {{#link-to 'notes.edit' note.id}}Edit{{/link-to}}
-            {{#link-to 'notes.delete' note.id}}Delete{{/link-to}}
+        <li class="fm-note-item">
+            <div class="action-head-wrap">
+                <h2 class="fm-note-heading">{{note.title}}</h2>
+                <p class="fm-note-dis">{{note.description}}</p>
+            </div>
+            <div class="action-wrap">
+                {{#link-to 'notes.edit'  note.id class="fm-note-edit action-btn"}}Edit{{/link-to}}
+                {{#link-to 'notes.delete'  note.id class="fm-note-delete action-btn"}}Delete{{/link-to}}
+            </div>
         </li>
     {{/each}}
 </ul>
+</div>
 
 {{outlet}}
