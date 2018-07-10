@@ -1,3 +1,16 @@
-<button {{action "deleteRecord" model}}>submit</button>
-{{#link-to 'notes' tagName="button"}}cancel{{/link-to}}
+{{!-- <button {{action "deleteRecord" model}}>submit</button>
+{{#link-to 'notes' tagName="button"}}cancel{{/link-to}} --}}
+
+
+<div class="new-light-box-mask delete-con">
+    <div class="new-light-box">
+        <h2>Are you sure want to delete this note?</h2>
+        <div class="delete-wrap">
+        <button {{action "deleteRecord" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-submit">submit</button>
+        {{#link-to 'notes' tagName="button" class="action-btn btn-cancle"}}cancel{{/link-to}}
+        {{outlet}}
+        </div>
+    </div>
+</div>
+
 {{outlet}}

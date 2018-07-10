@@ -7,10 +7,12 @@ export default Route.extend({
     actions:{
         sam(note){
             let _this = this;
+            let flash = false;
             // debugger
             note.save()
                 .then(function(){
                     _this.transitionTo('notes');
+                    flash=true;
                     console.log("samrrrrr")
                 }).catch(function(){
 

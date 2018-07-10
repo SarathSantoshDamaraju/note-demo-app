@@ -1,12 +1,12 @@
 <div class="new-light-box-mask">
     <div class="new-light-box">
         <h2>New Note</h2>
-        <label class="label-txt">Enter the title *</label>
+        <label class="label-txt">Title *</label>
         {{input value=model.title class="fm-heading-text"}}
-        <label class="label-txt">Enter the title *</label>
+        <label class="label-txt">Take a note... </label>
         {{textarea value=model.description class="fm-heading-textarea"}}
-        <button {{action "sam" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-new">submit</button>
-        {{#link-to 'notes' tagName="button" class="action-btn btn-new"}}cancel{{/link-to}}
+        <button {{action "sam" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-submit">submit</button>
+        {{#link-to 'notes' tagName="button" class="action-btn btn-cancle"}}cancel{{/link-to}}
         {{outlet}}
     </div>
 </div>

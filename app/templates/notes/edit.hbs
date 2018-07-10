@@ -1,8 +1,3 @@
-{{!-- {{input value=model.title}}
-{{textarea value=model.description}}
-<button {{action "updateRecord" model}} disabled={{v-get model 'isInvalid'}}>submit</button>
-{{#link-to 'notes' tagName="button"}}cancel{{/link-to}} --}}
-
 
 <div class="new-light-box-mask">
     <div class="new-light-box">
@@ -11,8 +6,8 @@
         {{input value=model.title class="fm-heading-text"}}
         <label class="label-txt">Enter the title *</label>
         {{textarea value=model.description class="fm-heading-textarea"}}
-        <button {{action "updateRecord" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-new">submit</button>
-        {{#link-to 'notes' tagName="button" class="action-btn btn-new"}}cancel{{/link-to}}
+        <button {{action "updateRecord" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-submit">submit</button>
+        {{#link-to 'notes' tagName="button" class="action-btn btn-cancle"}}cancel{{/link-to}}
         {{outlet}}
     </div>
 </div>

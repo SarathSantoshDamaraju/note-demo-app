@@ -1,25 +1,9 @@
-{{!-- <aside>
-    <ul>
-        <li>
-            {{#link-to 'notes' tagName="a"}}Notes{{/link-to}}
-        </li>
-        <li>
-            {{#link-to 'notes.new' tagName="a"}}New{{/link-to}}
-        </li>
-    </ul>
-</aside> --}}
-
-
 
 <nav class="fm-sidenav fm-nav-stick">
   <div class="fm-logo">
     {{#link-to 'dashboard' class="fm-menu-item"}}{{svg-jar "logo" class="__icon"}}{{/link-to}}
   </div>
   <ul>
-
-    <li class="fm-menu hint--right" >
-      {{#link-to 'notes.new' class="fm-menu-item"}} {{svg-jar "new-message" class="__icon fm-svg-valign"}} {{/link-to}}
-    </li>
     <li class="fm-menu hint--right" >
       {{#link-to 'notes' class="fm-menu-item"}} {{svg-jar "open-book" class="__icon fm-svg-valign"}} {{/link-to}}
     </li>

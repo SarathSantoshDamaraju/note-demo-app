@@ -280,6 +280,7 @@
 
   .#{$name-prefix}breadcrumbs {
     margin-top: 7px;
+    display: inline-block;
 }
 
   .action-btn {
@@ -292,6 +293,7 @@
     text-decoration: none;
     color: #fff;
     font-size: 12px;
+    border-radius: 2px;
     &:focus{
       outline: 0;
     }
@@ -363,10 +365,42 @@
 .label-txt {
   padding: 10px 0px 0px;
   display: block;
+  font-size: 12px;
 }
 
-.btn-new {
+.btn-cancle {
   color: #fff;
-  background: #2F2724;
-  padding: 7px 10px;
+  background: #EE5924;
+  border: 1px solid #EE5924;
+}
+
+.btn-submit {
+  color: #fff;
+  background: #02b875;
+  border: 1px solid #02b875;
+}
+
+.new-note {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 2px;
+}
+.delete-con{
+  text-align: center;
+}
+.delete-wrap{
+  margin: 20px 0 auto;
+}
+.delete-wrap .action-btn{
+  float: none;
+}
+.#{$name-prefix}note-edit{
+  background: #fff;
+  color: #333;
+}
+.#{$name-prefix}note-delete{
+  background: #EE5924;
+  border: 1px solid #EE5924;
 }
