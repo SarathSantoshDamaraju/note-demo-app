@@ -18,6 +18,8 @@ export default function() {
   this.put('/notes/:id');
   this.del('/notes/:id');
 
+  this.get('/tasks');
+
   /*
     Shorthand cheatsheet:
 

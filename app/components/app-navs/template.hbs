@@ -1,37 +1,21 @@
 
 <nav class="fm-sidenav fm-nav-stick">
   <div class="fm-logo">
-    {{#link-to 'dashboard' class="fm-menu-item"}}{{svg-jar "logo" class="__icon"}}{{/link-to}}
+    {{#link-to 'notes' class="fm-menu-item"}}{{svg-jar "freshnotes" class="__icon"}}{{/link-to}}
   </div>
   <ul>
     <li class="fm-menu hint--right" >
       {{#link-to 'notes' class="fm-menu-item"}} {{svg-jar "open-book" class="__icon fm-svg-valign"}} {{/link-to}}
     </li>
   </ul>
+  <div class="fm-logo fn-support">
+    <a href="http://help.appninja.org/support/home" class="fm-menu-item" target="_blank">{{svg-jar "support" class="__icon"}}</a>
+  </div>
 </nav>
 <div class="fm-main-area">
   {{yield}}
 </div>
 
 
-{{!-- <div class="fm-flash-msg-container">
-  {{#each flashMessages.queue as |flash|}}
-    {{#flash-message flash=flash class="fm-alert-msg" as |component flash close|}}
-      <div class="fm-icon-placeholder">
-        {{svg-jar "success-new" width="25" height="25" fill="#fff"}}
-      </div>
-      {{#if component.showProgressBar}}
-        <div class="alert-progress">
-          <div class="alert-progressBar" style="{{component.progressDuration}}"></div>
-        </div>
-      {{/if}}
-      <div class="fm-alert-content">
-        <h5 class="fm-sm-txt">{{flash.string}}</h5>
-        <p class="fm-secondary-txt fm-lighter fm-h6">{{flash.message}}</p>
-      </div>
-      <span class="fm-alert-close" {{action close}}>{{svg-jar "discard" fill="#9aa1a6" width="16" height="16"}}</span>
-    {{/flash-message}}
-  {{/each}}
-</div> --}}
 
 

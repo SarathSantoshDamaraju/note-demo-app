@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Note | Demo App</title>
+    <title>Appninja | Demo App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     {{content-for "head"}}
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/notes-app-demo.css">
+    <script src='//cdn.freshmarketer.com/220708/765180.js'></script>
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
     {{content-for "head-footer"}}
+
+    
   </head>
   <body>
     {{content-for "body"}}
-
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/notes-app-demo.js"></script>
 
     {{content-for "body-footer"}}
+    <script> window.fcWidget.init({ token: "87cc47b8-bbdc-4cd5-aacd-e4f8a57765c5", host: "https://wchat.freshchat.com" }); </script>
+    
   </body>
 </html>

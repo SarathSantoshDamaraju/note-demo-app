@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('delete', { path: ':note_id/delete' });
   });
   this.route('dashboard', { path: '/'});
+  this.route('task');
 });
 
 export default Router;
