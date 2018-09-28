@@ -4,10 +4,11 @@ export default Route.extend({
     actions:{
         sub() {
             //window.fcWidget.open();
-            
+            console.log("test")
             window.fcWidget.track('cancel_subscription', {
                 //Key and value can be anything relatable to your web app.
               });
+              
         }
     }
 });
