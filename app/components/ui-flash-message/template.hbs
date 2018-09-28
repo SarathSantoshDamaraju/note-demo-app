@@ -1,0 +1,19 @@
+{{#flash-message flash=flash class="fm-alert-msg" as |component flash close|}}
+    <div class="fm-icon-placeholder {{flashType}}">
+            {{svg-jar "download" width="25" height="25" fill="#fff"}}
+    </div>
+    {{#if component.showProgressBar}}
+    <div class="alert-progress">
+        <div class="alert-progressBar" style="{{component.progressDuration}}"></div>
+    </div>
+    {{/if}}
+
+    <div class="fm-alert-content">
+        <h5 class="fm-sm-txt">{{heading}}</h5>
+        <p class="fm-secondary-txt fm-lighter fm-h6">{{message}}</p>
+    </div>
+    {{!-- <span class="fm-alert-close" {{action close}}>{{svg-jar "discard" fill="#9aa1a6" width="16" height="16"}}</span> --}}
+{{/flash-message}} 
+
+
+{{yield}}

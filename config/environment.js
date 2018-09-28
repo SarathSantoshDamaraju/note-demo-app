@@ -6,6 +6,20 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: 'AIzaSyD0eO1asSPwjoYkQPG',
+      authDomain: 'app-test-78aef.firebaseapp.com',
+      databaseURL: 'https://app-test-78aef.firebaseio.com',
+      storageBucket: 'app-test-78aef.appspot.com',
+    },
+
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -25,7 +39,7 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV['ember-cli-mirage'] = {
-      enabled: true
+      enabled: false
     }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -48,7 +62,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV['ember-cli-mirage'] = {
-      enabled: true
+      enabled: false
     }
     // here you can enable a production-specific feature
   }

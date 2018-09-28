@@ -1,26 +1,32 @@
 import Route from '@ember/routing/route';
+import { get } from '@ember/object';
+import commonEvent from 'notes-app-demo/mixins/common-event';
 
-export default Route.extend({
-    model(){
-        return this.store.createRecord('note');
+export default Route.extend(commonEvent, {
+  model() {
+    return this.store.createRecord('note');
+  },
+  actions: {
+    sam(note) {
+      const flashMessages = get(this, 'flashMessages');
+      let isCookie = this.getCookie('appninjauser') || undefined,
+          noteName = note.get('title');
+      note.save()
+        .then(() => {
+          if(isCookie){
+            this.createEvent(isCookie, "Create new note", noteName);
+          }
+          this.transitionTo('notes');
+          flashMessages.success('Note created successfully!',{
+            string: "Success"
+          });
+        }).catch(function (error) {
+          // debugger
+        });
     },
-    actions:{
-        sam(note){
-            let _this = this;
-            let flash = false;
-            // debugger
-            note.save()
-                .then(function(){
-                    _this.transitionTo('notes');
-                    flash=true;
-                    console.log("samrrrrr")
-                }).catch(function(){
-
-                });
-        },
-        willTransition() {
-            this._super(...arguments);
-            this.get('controller.model').rollbackAttributes();
-        }
+    willTransition() {
+      this._super(...arguments);
+      this.get('controller.model').rollbackAttributes();
     }
+  }
 });

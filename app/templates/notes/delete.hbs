@@ -6,7 +6,7 @@
     <div class="new-light-box">
         <h2>Are you sure want to delete this note?</h2>
         <div class="delete-wrap">
-        <button {{action "deleteRecord" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-submit">submit</button>
+        <button {{action "deleteRecord" model}} disabled={{v-get model 'isInvalid'}} class="action-btn btn-submit">yes</button>
         {{#link-to 'notes' tagName="button" class="action-btn btn-cancle"}}cancel{{/link-to}}
         {{outlet}}
         </div>

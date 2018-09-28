@@ -7,9 +7,14 @@
     <li class="fm-menu hint--right" >
       <a href="http://help.appninja.org/support/home" class="fm-menu-item" target="_blank">{{svg-jar "support" class="__icon setWidth" width=30px}}</a>
     </li>
-  
+    
 
   </ul>
+  <ul class="subscribe-btm">
+    <li class="fm-menu hint--right" >
+          {{#link-to 'subscription' class="fm-menu-item"}}{{svg-jar "rss" class="__icon"}}{{/link-to}}
+      </li>
+    </ul>
 </nav>
 <div class="fm-main-area">
   {{yield}}
