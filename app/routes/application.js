@@ -1,8 +1,11 @@
-import Route from '@ember/routing/route';
+import Ember from 'ember';
 
-export default Route.extend({
-
-    beforeModel() {
-        // this.transitionTo('notes'); 
-      }
+export default Ember.Route.extend({
+    model(){
+        return this.store.findAll('user')
+    },
+    afterModel(model, controller){
+        debugger
+    }
+  
 });

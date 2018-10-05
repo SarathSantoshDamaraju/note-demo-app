@@ -12,5 +12,6 @@ const Validations = buildValidations({
 
 export default DS.Model.extend(Validations, {
     title: DS.attr('string'),
-    description: DS.attr('string')
+    description: DS.attr('string'),
+    userId: DS.attr('string')
 });
