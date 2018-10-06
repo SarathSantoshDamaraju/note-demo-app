@@ -16,8 +16,12 @@ export default Component.extend(commonEvent, {
     }),
     actions: {
         signout(){
-            console.log('signout');
+            this.deletCookie('appninjauser')
+            window.location.href = "http://localhost:6677/login.html";
         }
+    },
+    deletCookie(name) {
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 
 });
