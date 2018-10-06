@@ -8,11 +8,10 @@ export default Route.extend(commonEvent, {
   },
   actions: {
     sam(note) {
-      debugger;
       const flashMessages = get(this, 'flashMessages');
       let isCookie = this.getCookie('appninjauser') || undefined,
           noteName = note.get('title');
-          note.set('userId',isCookie);
+          note.set('userId', isCookie);
       note.save()
         .then(() => {
           if(isCookie){
@@ -23,7 +22,6 @@ export default Route.extend(commonEvent, {
             string: "Success"
           });
         }).catch(function (error) {
-          // debugger
         });
     },
     willTransition() {

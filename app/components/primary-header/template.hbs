@@ -5,9 +5,36 @@
     </div>
     <div class="fm-box-lg-6 fm-box-md-6 fm-box-sm-6 fm-box-xs-6 fm-text-right">
         <ul class="fm-header-menu">
-            <li class="__header-list">
-                <a class="fm-avatar">{{firstLetter}}</a>
-            </li>
+            {{!-- <li class="__header-list">
+                {{#basic-dropdown as |dropdown|}}
+                        {{#dropdown.trigger}}<a class="fm-avatar">{{firstLetter}}</a>{{/dropdown.trigger}}
+                        {{#dropdown.content}}Sign out{{/dropdown.content}}
+                 {{/basic-dropdown}}
+            </li> --}}
+
+            <li >
+            {{#basic-dropdown horizontalPosition='right' as |dd|}}
+                {{#dd.trigger class="fm-dropdown-row"}}
+                <ul class="fm-header-menu">
+                    <li class="__header-list">
+                        {{!-- {{shared/custom-avatar size="50" value=first_letter class="fm-cursor-pointer"}} --}}
+                        <a class="fm-avatar">{{firstLetter}}</a>
+                    </li>
+                </ul>
+                {{/dd.trigger}}
+                {{#dd.content class="fm-dropdown-sendnow fm-dropdown-container __sendnowarrow slide-fade"}}
+                <div class="fm-create-btn-dropdown">
+                        <ul class="fm-dropdown">
+                        <li class="fm-dropdown-list">
+                            <a class="fm-dropdown-item fm-h5" {{action "signout" }}>sign out</a>
+                        </li> 
+                    </ul>
+                </div>
+                {{/dd.content}}
+            {{/basic-dropdown}}
+        </li>
+
         </ul>
+        
     </div>
 </div>

@@ -2,6 +2,7 @@
 @import 'pages/variables'; 
 @import 'pages/commons'; 
 @import 'pages/grid-mixins';
+@import 'ember-basic-dropdown';
 
 // reset codes
 @import 'pages/normilize'; 
@@ -13,3 +14,5 @@
 @import 'pages/gridmethods';
 @import 'pages/grid';
 @import 'pages/avatar';
+
+@import 'web-comp/dropdown';

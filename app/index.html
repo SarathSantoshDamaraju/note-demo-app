@@ -16,7 +16,81 @@
     <script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='//d952cmcgwqsjf.cloudfront.net/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init('//appninja.freshsales.io','b5e1fd16def90e823ba817d6835969ab137a108377ebde4fd2ba8897e7d6d492',true);}})();</script>
     {{content-for "head-footer"}}
 
-    
+    <style>
+body{
+   /* background-color:#1d1e22; */
+   /* position:relative; */
+   height:100vh;
+   /* font-family:'Open Sans',sans-serif; */
+   perspective:1000px;
+}
+
+@keyframes loading{
+   0%{
+      transform:translate(-50%,-50%) rotateZ(0deg);
+   }
+   25%{
+      transform:translate(-50%,-50%) rotateZ(45deg);
+   }
+   50%{
+       transform:translate(-50%,-50%) rotateZ(90deg);
+   }
+   75%{
+      transform:translate(-50%,-50%) rotateZ(135deg);
+   }
+   100%{
+      transform:translate(-50%,-50%) rotateZ(180deg);
+   }
+}
+
+
+@keyframes loading-inner{
+   0%{
+      height:0;
+   }
+   25%{
+      height:50%;
+   }
+   50%{
+      height:50%;
+   }
+   80%{
+      height:50%;
+   }
+   100%{
+      height:0%;
+   }
+} 
+
+.loader{
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   width:50px;
+   height:50px;
+   color:#383c7d;
+   font-size:20px;
+   line-height:50px;
+   text-align:center;
+   border:2px solid #383c7d;
+   border-radius:2px;
+   perspective:1000px;
+   animation: loading 2s linear infinite;
+}
+
+.loader:after{
+   content:"";
+   position:absolute;
+   width:100%;
+   top:0;
+   left:0;
+   background-color: #383c7d;
+   animation: loading-inner 2s linear infinite;
+}
+
+
+    </style>
   </head>
   <body>
     {{content-for "body"}}
@@ -25,6 +99,9 @@
 
     {{content-for "body-footer"}}
     <script> window.fcWidget.init({ token: "87cc47b8-bbdc-4cd5-aacd-e4f8a57765c5", host: "https://wchat.freshchat.com" }); </script>
-    
+    <div id="an-loader">
+      <div class="loader">
+      </div>
+    </div>
   </body>
 </html>

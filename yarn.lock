@@ -2446,6 +2446,14 @@ ember-ajax@^3.0.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
+ember-basic-dropdown@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-1.0.3.tgz#bd785c84ea2b366951e0630f173c84677ed53b6c"
+  dependencies:
+    ember-cli-babel "^6.12.0"
+    ember-cli-htmlbars "^2.0.3"
+    ember-maybe-in-element "^0.1.3"
+
 ember-char-counter@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/ember-char-counter/-/ember-char-counter-0.0.5.tgz#683c2bb541f98549d72fecc37d7547518f74e40b"
@@ -2911,6 +2919,12 @@ ember-maybe-import-regenerator@^0.1.6:
     broccoli-merge-trees "^1.0.0"
     ember-cli-babel "^6.0.0-beta.4"
     regenerator-runtime "^0.9.5"
+
+ember-maybe-in-element@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/ember-maybe-in-element/-/ember-maybe-in-element-0.1.3.tgz#1c89be49246e580c1090336ad8be31e373f71b60"
+  dependencies:
+    ember-cli-babel "^6.11.0"
 
 ember-qunit@^3.3.2:
   version "3.4.1"
