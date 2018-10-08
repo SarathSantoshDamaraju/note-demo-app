@@ -20,8 +20,7 @@ export default Component.extend(commonEvent, {
         }
     },
     deletCookie(name) {
-        var domain = document.domain;
-        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=.' + domain;
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT';
     }
 
 });
