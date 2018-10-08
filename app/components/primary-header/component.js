@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import commonEvent from 'notes-app-demo/mixins/common-event';
 import { computed } from '@ember/object';
-
+import config from 'notes-app-demo/config/environment';
 
 export default Component.extend(commonEvent, {
     didInsertElement(){
@@ -17,7 +17,7 @@ export default Component.extend(commonEvent, {
     actions: {
         signout(){
             this.deletCookie('appninjauser')
-            window.location.href = "https://appninja.org/login";
+            window.location.href = config.loginURL;
         }
     },
     deletCookie(name) {

@@ -46,6 +46,7 @@ module.exports = function(environment) {
     ENV['ember-cli-mirage'] = {
       enabled: false
     }
+    ENV.loginURL = "http://localhost:6677/login.html"
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -66,6 +67,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.loginURL = "https://appninja.org/login"
     ENV['ember-cli-mirage'] = {
       enabled: false
     }
