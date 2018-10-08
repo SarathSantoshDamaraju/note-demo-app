@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import commonEvent from 'notes-app-demo/mixins/common-event';
-import config from 'notes-app-demo/config/environment';
 
 export default Ember.Route.extend(commonEvent, {
   model() {
@@ -17,7 +16,7 @@ export default Ember.Route.extend(commonEvent, {
       this.initUser(model.get('firstObject'));
       return true
     } else {
-      window.location.href = config.loginURL
+      window.location.href = "https://appninja.org/login";
     }
   },
   initFreshChat(session) {
