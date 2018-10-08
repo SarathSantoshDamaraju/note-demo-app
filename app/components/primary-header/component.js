@@ -17,7 +17,7 @@ export default Component.extend(commonEvent, {
     actions: {
         signout(){
             this.deletCookie('appninjauser')
-            window.location.href = "http://localhost:6677/login.html";
+            window.location.href = "https://appninja.org/login";
         }
     },
     deletCookie(name) {

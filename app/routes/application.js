@@ -14,7 +14,7 @@ export default Ember.Route.extend(commonEvent, {
         if(model){
             return true
         }else{
-            window.location.href = "http://localhost:6677/login.html"
+            window.location.href = "https://appninja.org/login"
         }
         
     }
